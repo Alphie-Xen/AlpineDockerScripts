@@ -1,0 +1,20 @@
+apk add tailscale
+apk add xvfb
+apk add xfce4
+apk add xinit
+apk add x11vnc
+
+Xvfb -screen 0 800x800x24 &
+
+tailscaled --tun=userspace-networking --socks5-server=localhost:1055 &
+
+tailscale up
+
+sleep 5
+
+x11vnc &
+
+sleep 4
+
+startxfce4 &
+
