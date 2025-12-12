@@ -1,6 +1,6 @@
 apk add tailscale
 apk add xvfb
-apk add xfce4
+apk add dwm
 apk add xinit
 apk add x11vnc
 
@@ -12,9 +12,9 @@ tailscale up
 
 sleep 5
 
-x11vnc &
+DISPLAY=:0  x11vnc &
 
 sleep 4
 
-startxfce4 &
+DISPLAY=:0 dwm &
 
