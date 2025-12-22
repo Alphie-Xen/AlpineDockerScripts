@@ -4,7 +4,7 @@ apk add dwm
 apk add xinit
 apk add x11vnc
 
-Xvfb -screen 0 720x350x24 &
+Xvfb -screen 0 1080x720x24 &
 
 tailscaled --tun=userspace-networking --socks5-server=localhost:1055 &
 
